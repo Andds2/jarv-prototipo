@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', Arial;
+}
+
+:root{
+    --dark: #1e1e1e;
+    --light: #d9d9d9;
+    --white: #fafafa;
+    --semidark: #444444;
+    --primary: #0280C2;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark);
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    width: 90%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav button{
+    background-color: var(--dark);
+    border: none;
+}
+
+nav button i{
+    color: var(--white);
+    font-size: 32px;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section{
+    width: 90%;
+    display: flex;
+}
+
+section#jarv-mostrar{
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+}
+
+section#jarv-mostrar svg path{
+    fill: var(--primary);
+    stroke: var(--primary);
+}
+
+section#jarv-mostrar h1{
+    color: var(--light);
+    width: 75%;
+}
+
+section#chat-old{
+    margin-top: 2vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 25vh;
+    gap: 5px;
+    overflow: hidden;
+    transition: all .6s;
+}
+
+section#chat-old span{
+    width: 100%;
+    text-align: left;
+    color: var(--light);
+    font-size: 12px;
+}
+
+.content-chat-old{
+    width: 100%;
+    height: 40%;
+    background-color: var(--semidark);
+    border-radius: 30px;
+    display: flex;
+    transition: all .6s;
+    overflow: hidden;
+}
+
+.qtde-dias{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qtde-dias h1{
+    font-size: 18px;
+    color: var(--light);
+    font-weight: 400;
+    text-align: center;
+}
+
+.conteudo-msg{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo-msg p{
+    font-size: 16px;
+    color: var(--light);
+    font-weight: 400;
+    text-align: left;
+    width: 90%;
+}
+
+section#chat{
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    height: 30vh;
+    transition: all .6s;
+}
+
+section#chat span{
+    width: 100%;
+    text-align: left;
+    color: var(--light);
+    font-size: 12px;
+}
+
+.chat-hist{
+    margin-top: 5px;
+    width: 90%;
+    height: 60%;
+    background-color: var(--light);
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    transition: all .6s;
+}
+
+.svg-max-chat{
+    width: 40px;
+    height: 40px;
+    background-color: var(--semidark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+}
+
+.svg-max-chat i{
+    color: var(--light);
+    font-size: 24px;
+}
+
+.chat-msg-jarv{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    align-items: start;
+}
+
+.msg-jarv{
+    width: 40%;
+    height: 90%;
+    margin-left: 5%;
+    background-color: var(--semidark);
+    position: relative;
+}
+
+.msg-jarv::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;  /* cateto horizontal */
+    border-bottom: 20px solid var(--semidark);
+    transform: rotate(180deg);
+    border-radius: 5px;
+    top: 90%;
+}
+
+.chat-msg-user{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: end;
+}
+
+.msg-user{
+    width: 40%;
+    height: 90%;
+    margin-left: 5%;
+    background-color: var(--semidark);
+    position: relative;
+}
+
+.msg-user::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;  /* cateto horizontal */
+    border-bottom: 20px solid var(--semidark);
+    transform: rotate(270deg);
+    border-radius: 5px;
+    top: 90%;
+    right: 0;
+}
+
+.atalhos{
+    height: 4vh;
+    width: 100%;
+}
+
+.content-atalhos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.content-atalhos button{
+    font: 12px;
+    background-color: var(--semidark);
+    color: var(--white);
+    padding-inline: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-chat{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.input-chat input{
+    width: 90%;
+    height: 90%;
+    background-color: var(--light);
+    border: none;
+    border-radius: 20px;
+    padding-inline: 5px;
+}
+
+.input-chat input:focus{
+    outline: none;
+}
+
+.input-chat button{
+    position: absolute;
+    border: none;
+    border-radius: 5px;
+    right: 5%;
+    background-color: var(--light);
+}
+
+.input-chat button svg{
+    color: var(--semidark);
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer menu{
+    width: 90%;
+    height: 90%;
+    background-color: var(--semidark);
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer menu#menu-rel{
+    box-shadow: 0px -10px 10px #00000034;
+}
+
+footer menu nav{
+    width: 90%;
+}
+
+footer menu nav button{
+    background-color: transparent;
+    border: none;
+}
+
+footer menu nav button svg{
+    width: 25px;
+}
+
+footer menu nav button svg path{
+    fill: var(--white);
+    stroke: var(--white);
+}
+
+footer menu nav button.active svg path{
+    fill: var(--primary);
+    stroke: var(--primary);
+
+}
+
+main#rel{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.rel-style{
+    width: 85%;
+    height: 10vh;
+    background-color: var(--semidark);
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.rel-style:nth-child(2),
+.rel-style:nth-child(3){
+    margin-top: -30px;
+}
+
+.rel-style.active{
+    background-color: var(--light);
+    height: 55vh;
+    width: 90%;
+}
+
+.rel-style::after{
+    content: '';
+    position: absolute;
+    background-color: var(--semidark);
+    bottom: 90%;
+    right: 0;
+    width: 50px;
+    height: 20px;
+    border-radius: 100px 10px 0px 0px;
+}
+
+.rel-style.active::after{
+    background-color: var(--light);
+    bottom: 98%;
+}
+
+.header-rel{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: end;
+}
+
+.header-rel h1{
+    margin-left: 10px;
+    color: var(--semidark);
+}
+
+.tot-contas{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content-conta{
+    width: 40%;
+    height: 80%;
+    border: 4px solid var(--semidark);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    background-color: var(--light);
+    box-shadow: 4px 4px 0px var(--semidark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-conta span{
+    font-size: 10px;
+    color: var(--semidark);
+    font-weight: 600;
+}
+
+.info-lucro{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.box{
+    width: 50%;
+    height: 80%;
+    background-color: var(--semidark);
+    border-radius: 5px;
+}
+
+.percent-lucro{
+    width: 15%;
+    height: 80%;
+    border: 2px solid var(--semidark);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.percent-lucro span{
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--semidark);
+}
+
+.info-lucro > span{
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--semidark);
+}
+
+.gasto-setor{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gt-setor-header{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    align-items: end;
+}
+
+.gt-setor-header h1{
+    font-size: 16px;
+    color: var(--semidark);
+    width: 100%;
+    text-align: left;
+}
+
+.gt-setor-header h1 span{
+    color: var(--primary);
+}
+
+.gt-setor-gastos{
+    width: 90%;
+    display: flex;
+    margin-top: 5px;
+}
+
+.gastos-title,
+.gastos-valor{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.gastos-title span{
+    background-color: var(--semidark);
+    color: var(--white);
+    font-size: 10px;
+    padding: 5px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.gastos-valor span{
+    color: var(--semidark);
+    font-size: 10px;
+    padding: 5px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.escolha-setor{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.escolha-setor button{
+    padding-inline: 4px;
+    background-color: var(--semidark);
+    border: 2px solid var(--dark);
+    border-radius: 5px;
+    color: var(--white);
+}
+
+.escolha-setor button.esc{
+    color: var(--primary);
+    border: 2px solid var(--semidark);
+}
+
+.rel-style#indic-gerais 
+.header-rel,
+.rel-style#dados-periodo
+.header-rel{
+    height: 40%;
+}
+
+.rel-style#indic-gerais 
+.header-rel h1,
+.rel-style#dados-periodo
+.header-rel h1{
+    color: var(--light);
+    font-size: 16px;
+}
+
+main#nofunc{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+main#nofunc h1{
+    text-align: center;
+    color: var(--white);
+}
+
+
+
