@@ -573,4 +573,39 @@ main#nofunc h1{
 }
 
 
+@media screen and (max-height: 800px) {
+    .header-rel{
+        height: 6%;
+    }
+
+    .header-rel h1{
+        font-size: 18px;
+    }
+
+    .tot-contas{
+        height: 15%;
+    }
+
+    .content-conta{
+        width: 35%;
+        height: 80%;
+        border: 2px solid var(--semidark);
+        box-shadow: 2px 2px 0px var(--semidark);
+    }
+
+    .content-conta span{
+        font-size: 8px;
+    }
+
+    .gasto-setor{
+        height: 53%;
+    }
+
+    .rel-style:nth-child(3){
+        margin-top: -20px;
+    }
+
+}
+
+
 
